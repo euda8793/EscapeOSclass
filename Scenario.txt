@@ -1,19 +1,80 @@
 On Startup:
-    The user sees Background.jpg, whatever that ends up being. It's an image of a dark, ugly prison cell.
+    <The user sees image of a dark, ugly prison cell, with an empty inventory at the bottom>
 
-The user is prompted in some way, "How did I get here? I was just driving down the highway... what year is it?".
-Some sort of dialog appears and says, "Try to find a way to escape."
+    <User sees or hears: "How did I get here? I was just driving down the highway... what year is it?">
+    <User sees or hears: "Try to find a way to escape.">
 
-The user will hover their mouse around try to find somewhere to click. When their mouse turns into the pointer hand we're all familiar with, then it means they can click to uncover an item.
+    User: <moves mouse around background; when they hover over the pile of rubber, the mouse changes to the selection hand icon>
 
-First Item - Note:
-    Display a paper note: "HELP! THE WARDEN HAS GONE CRAZY! HE'S GOING TO PUT ME IN THE CHAIR! I DIDN'T DO A DAMN THING!"
-    "HE SAID I SHOULD HAVE TALKED TO HIM FIRST"
+    User: <clicks on NOTE>
 
-    A button appears in the user's inventory with a phone, a picture of a warden, or something. When they click it, an audio file plays.
+    NOTE appears in inventory.
 
-    "Warden?"
+First Item - NOTE:
+    <User sees on paper img: "HELP! THE WARDEN HAS GONE CRAZY! HE'S GOING TO PUT ME IN THE CHAIR! I DIDN'T DO ANYTHING!"
+    "He said he only kills his friends. Maybe I should have been meaner.">
 
-    A warden appears.
+    Inventory: <Call Warden button appears>
 
-ON WARDEN:
+    <User sees or hears player voice: "Warden?">
+
+    Warden: appears.
+
+    User: <sees creepy looking Warden: "What do you want?">
+    <User is given a choice of the options corresponding to their tree level>
+
+CONVERSATION TREE:
+    W: What do you want?
+        U: I just thought I'd say hi. How are you?
+            W: Good! Just getting ready for supper. You're going to join me!
+            //start over, return to cell w/ call button
+        U: Wow, that shirt makes you look handsome!
+            W: Why, thank you! I love getting a compliment from a friend. Anyway, I need to get working on dinner.
+            //start over, return to cell w/ call button
+        U: You're so ugly, you should put me in solitary confinement for my own protection!
+            W: Hey, that's rather hurtful!
+                U: Yeah, and I bet your handcuffs are so people don't run away from you when they see you.
+                    W: I might have to uninvite you from my birthday party!
+                        U: I'm glad, I was the only one going to show up anyway!
+                            W: I've had enough of this! I'm so mad, I don't want to see you anymore. Take your dinner. I'm leaving!
+                            <User gets spaghetti, meatballs, and a fork in inventory- break to next scene>
+                        U: Oh, wait... I'm sorry, how old are you turning?
+                            W: You should know, buddy! We've been friends since before you were born.
+                            //start over, return to cell w/ call button
+                        U: Yeah, well, you're mean! You locked me in here. Happy Birthday, jerk!
+                            W: Thanks! I love birthday parties. You're re-invited.
+                            //start over, return to cell w/ call button
+                U: Good!
+                    W: You're funny when you're mad! I forgive you. I've gotta get back to cooking!
+                    //start over, return to cell w/ call button
+                U: I'll apologize if you let me out of here!
+                    W: Let you out of where? We just got here! Let's play a game after dinner tonight. You'll die of laughter!
+                    //start over, return to cell w/ call button
+
+THE ESCAPE:
+    USER: <sees dialog: "Maybe you can use your dinner to get out while the Warden's away!"
+    Inventory at this stage: Note, Spaghetti, Spaghetti Sauce, Fork
+    When user clicks on an item, it is highlighted, and when they click on something, that item is applied to it.
+
+
+1:
+    When the user clicks on the mattress, they hear a spring noise.
+    When user clicks on spaghetti for the first time, they get a dialog:
+    "Wait, this isn't even spaghetti! It's as hard as a rope!"
+
+    2 loads when user clicks on air opening with Spaghetti.
+
+2: A dialog appears: "Ugh, the rope's not quite long enough!"
+
+    When the user clicks the mattress, regardless of selected inventory, they hear "Whee!", and 3 is loaded.
+
+3: <An image with the character's head stuck in the top of the hole appears>
+
+    Dialog: "How am I going to get out of this? I'm stuck!"
+
+    When user clicks area next to character with Spaghetti Sauce, 4 is loaded.
+
+4: <An image with the character above ground appears.>
+    <Wait a few seconds. 5 is loaded.>
+
+5: "I'm free!" <display endgame screen>
