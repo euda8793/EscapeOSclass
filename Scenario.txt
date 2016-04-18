@@ -1,0 +1,19 @@
+On Startup:
+    The user sees Background.jpg, whatever that ends up being. It's an image of a dark, ugly prison cell.
+
+The user is prompted in some way, "How did I get here? I was just driving down the highway... what year is it?".
+Some sort of dialog appears and says, "Try to find a way to escape."
+
+The user will hover their mouse around try to find somewhere to click. When their mouse turns into the pointer hand we're all familiar with, then it means they can click to uncover an item.
+
+First Item - Note:
+    Display a paper note: "HELP! THE WARDEN HAS GONE CRAZY! HE'S GOING TO PUT ME IN THE CHAIR! I DIDN'T DO A DAMN THING!"
+    "HE SAID I SHOULD HAVE TALKED TO HIM FIRST"
+
+    A button appears in the user's inventory with a phone, a picture of a warden, or something. When they click it, an audio file plays.
+
+    "Warden?"
+
+    A warden appears.
+
+ON WARDEN:
