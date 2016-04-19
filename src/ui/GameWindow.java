@@ -1,20 +1,16 @@
 package ui;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.ComponentOrientation;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.Image;
 import java.awt.Insets;
-import java.awt.LayoutManager;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 import javax.swing.BorderFactory;
-import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -23,6 +19,8 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
 @SuppressWarnings("serial")
@@ -31,6 +29,8 @@ public class GameWindow extends JFrame{
 	JPanel pan1;
 	JPanel pan2;
 	JPanel pan3;
+	JPanel pan4;
+	JTextField tf;
 	
 	//custom label
 	ILabel lab1;
@@ -42,12 +42,13 @@ public class GameWindow extends JFrame{
 		super(title);
 		setSize(1135, 850);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		this.setBounds(300, 100, 1135, 850);
+		this.setBounds(300, 100, 1135, 840);
 		
 		//insert panels
 		pan1 = new JPanel();
 		pan2 = new JPanel();
 		pan3 = new JPanel();
+		pan4 = new JPanel();
 		
 		
 		//Label 
@@ -56,11 +57,22 @@ public class GameWindow extends JFrame{
 		pan2.setBackground(Color.BLACK);
 		pan1.add(pan2);
 		pan3.setLayout(new FlowLayout(FlowLayout.LEFT));
-		pan3.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLoweredSoftBevelBorder(), "Inventory", TitledBorder.CENTER, TitledBorder.CENTER,pan3.getFont(), Color.BLACK));
+		pan3.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLoweredSoftBevelBorder(), "Inventory", TitledBorder.CENTER, TitledBorder.CENTER,pan3.getFont(), Color.YELLOW));
+		pan3.add(new IButton("PrisonBG.jpg"));
 		pan1.add(pan3);
-		pan3.setPreferredSize(new Dimension(1100, 195));
+		pan3.setPreferredSize(new Dimension(1100, 140));
 		pan3.setBackground(Color.gray);
+		tf = new JTextField("Welcome to Escape OS!");
+		tf.setPreferredSize(new Dimension(1100, 40));
+		tf.setEnabled(false);
+		tf.setDisabledTextColor(Color.YELLOW);
+		tf.setFont(new Font("Verdana", Font.BOLD, 12));
+		tf.setBackground(Color.BLACK);
+		tf.setBorder(BorderFactory.createEmptyBorder());
+		pan4.setLayout(new GridLayout());
+		pan4.add(tf);
 		pan1.setBackground(Color.BLACK);
+		pan1.add(pan4);
 		this.add(pan1);
 		
 		//Menu
@@ -101,7 +113,7 @@ public class GameWindow extends JFrame{
 		});
 		i1.add(i3);
 		JMenu i2 = new JMenu("Help");
-		JMenuItem i4 = new JMenuItem("What to do?");
+		JMenuItem i4 = new JMenuItem("Stuck?");
 		i2.add(i4);
 		JMenuBar mb = new JMenuBar();
 		mb.add(i1);
@@ -121,7 +133,7 @@ public class GameWindow extends JFrame{
 			this.setSize(140, 140);
 			this.setBackground(Color.gray);
 			Image img = (new ImageIcon(filename)).getImage();
-			Image newimg = img.getScaledInstance(70, 70,  java.awt.Image.SCALE_FAST);
+			Image newimg = img.getScaledInstance(100, 100,  java.awt.Image.SCALE_FAST);
 			this.setIcon(new ImageIcon(newimg));
 			this.setMargin(new Insets(0, 0, 0, 0));
 		}
