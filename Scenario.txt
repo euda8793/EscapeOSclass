@@ -64,7 +64,9 @@ THE ESCAPE:
 
     2 loads when user clicks on air opening with Spaghetti.
 
-2: A dialog appears: "Ugh, the rope's not quite long enough!"
+2: <An image appears with the spaghetti-rope hanging from the top>
+
+    A dialog appears: "Ugh, the rope's not quite long enough!"
 
     When the user clicks the mattress, regardless of selected inventory, they hear "Whee!", and 3 is loaded.
 
