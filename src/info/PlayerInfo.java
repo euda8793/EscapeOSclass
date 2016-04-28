@@ -11,7 +11,7 @@ public class PlayerInfo {
 	 * 2 indicates that the item is selected.
 	 * -2 indicates that the item was gathered, but then lost.
 	 */
-	private int[] inventory = {0,0,0,0,0,0};
+	private int[] inventory = {0,0,0,0,0};
 	
 	private Point lastClickPos;
 	

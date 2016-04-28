@@ -25,7 +25,7 @@ public class SceneBuilder {
 	/**
 	 * The path from the relative base where the builder file will be stored.
 	 */
-	private static final String BUILDER_FILEPATH = "";
+	private static final String BUILDER_FILEPATH = "Builder.xml";
 	
 	/**
 	 * The building function.
@@ -72,9 +72,10 @@ public class SceneBuilder {
 		
 		try{
 			//Open the file:
-			File inputFile = new File(basePath + BUILDER_FILEPATH);
+			File inputFile = new File(/*basePath + */BUILDER_FILEPATH);
 	        DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 	        DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+	        System.out.println(inputFile.getAbsolutePath());
 	        Document doc = (Document) dBuilder.parse(inputFile);
 	        doc.getDocumentElement().normalize();;
 	        
@@ -98,5 +99,10 @@ public class SceneBuilder {
 		//public SceneLink(int[] inventoryReqs, Rectangle clickRegion, ItemMod mod, int modSlot, int linkLabel)
 		
 		return null;
+	}
+	
+	public static void main(String[] args)
+	{
+		build();
 	}
 }

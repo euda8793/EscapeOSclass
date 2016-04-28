@@ -15,7 +15,7 @@ public class SceneLink
 	 * -1 indicates that the corresponding items slot may have any value.
 	 * Any other value means that the items slot must have the same value.
 	 */
-	private int[] inventoryReqs = {-1,-1,-1,-1};
+	private int[] inventoryReqs = {-1,-1,-1,-1,-1};
 	
 	/**
 	 * The area that may be clicked to activate the link.

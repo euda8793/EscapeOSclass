@@ -59,8 +59,6 @@ public class ButtonListener implements ActionListener{
 	
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		// TODO Auto-generated method stub
-		// TODO: update player info and change cursor image.
 		int[] inventory = info.getInventory();
 		if(inventory[imageNum] == 1)//If the item is unselected but in the inventoy.
 		{
@@ -80,6 +78,5 @@ public class ButtonListener implements ActionListener{
 			info.modifyItem(imageNum, ItemMod.DESELECT);
 			buttons[imageNum].setBorder(selectBorder);
 		}
-		//TODO: change the cursor?
 	}
 }
