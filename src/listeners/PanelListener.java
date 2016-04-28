@@ -12,11 +12,11 @@ import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
+import deprecated.SceneBuilder;
+import deprecated.SceneInfo;
+import deprecated.SceneLink;
 import info.ItemMod;
 import info.PlayerInfo;
-import info.SceneInfo;
-import info.SceneLink;
-import utility.SceneBuilder;
 
 public class PanelListener implements MouseListener
 {
@@ -72,7 +72,7 @@ public class PanelListener implements MouseListener
 	 * @param slot The slot number of the button.
 	 * @param active If the item is now in the inventory.
 	 */
-	private static void setButton(JButton[] buttons, int slot, boolean active)
+	public static void setButton(JButton[] buttons, int slot, boolean active)
 	{
 		JButton button = buttons[slot];
 		

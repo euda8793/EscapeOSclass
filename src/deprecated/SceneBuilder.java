@@ -1,4 +1,4 @@
-package utility;
+package deprecated;
 
 import java.awt.Rectangle;
 import java.awt.image.BufferedImage;
@@ -13,8 +13,6 @@ import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 
 import info.ItemMod;
-import info.SceneInfo;
-import info.SceneLink;
 
 public class SceneBuilder {
 	
@@ -84,8 +82,9 @@ public class SceneBuilder {
 	        ArrayList<SceneInfo> scenes = new ArrayList<SceneInfo>();
 	        for(int i = 0; i < sceneNodes.getLength(); i++)
 	        {
-	        	Node scene = sceneNodes.item(i);
-	        	System.out.println(scene);
+	        	Element scene = (Element) sceneNodes.item(i);
+	        	System.out.println(scene.getElementsByTagName("label").item(0).getTextContent());
+	        	
 	        }
 		}
 		catch(Exception e)

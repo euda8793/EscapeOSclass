@@ -16,6 +16,11 @@ public class PlayerInfo {
 	private Point lastClickPos;
 	
 	/**
+	 * How far the player has progressed in the game.
+	 */
+	private int gameProgression = 0;
+	
+	/**
 	 * Modifies the inventory item accordingly.
 	 * @param slot
 	 * @param mod
@@ -23,6 +28,14 @@ public class PlayerInfo {
 	public void modifyItem(int slot, ItemMod mod)
 	{
 		inventory[slot] = mod.Val();
+	}
+	
+	/**
+	 * Function to increment the player's progression.
+	 */
+	public void incrementProgression()
+	{
+		gameProgression++;
 	}
 	
 	////////////////////////
@@ -41,5 +54,10 @@ public class PlayerInfo {
 	public Point getLastClickPos()
 	{
 		return lastClickPos;
+	}
+	
+	public int getProgression()
+	{
+		return gameProgression;
 	}
 }

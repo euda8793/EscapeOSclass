@@ -1,7 +1,9 @@
-package info;
+package deprecated;
 
 import java.awt.Point;
 import java.awt.Rectangle;
+
+import info.ItemMod;
 
 /**
  * A class that specifies how two scenes are linked.

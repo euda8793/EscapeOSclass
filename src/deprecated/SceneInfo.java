@@ -1,8 +1,10 @@
-package info;
+package deprecated;
 
 import java.awt.Point;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
+
+import info.PlayerInfo;
 
 public class SceneInfo
 {

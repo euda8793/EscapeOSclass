@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<builder>
+	<scene>
+		<label>0</label>
+		<link>
+			<requirements>-1,-1,-1,-1,-1</requirements>
+			<rect>0,0,50,50</rect>
+			<mod></mod>
+			<modslot></modslot>
+			<linklabel>1</linklabel></link></scene>
+	<scene>
+		<label>1</label>
+	</scene>
+	<scene>
+		<label>2</label>
+	</scene>
+	<scene>
+		<label>3</label>
+	</scene>
+	<scene>
+		<label>4</label>
+	</scene>
+</builder>
