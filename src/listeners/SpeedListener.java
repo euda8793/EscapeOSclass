@@ -47,12 +47,12 @@ public class SpeedListener implements MouseListener
 	/**
 	 * The names of the images used in the display.
 	 */
-	private static String[] IMAGE_NAMES = {"PrisonBG","PrisonBG","PrisonBG","PrisonBG2","PrisonBG3","PrisonBG4","PrisonBG5"};
+	private static String[] IMAGE_NAMES = {"PrisonBG.jpg","PrisonBG.jpg","PrisonBG.jpg","PrisonBG2.jpg","PrisonBG3.jpg","PrisonBG4.jpg","PrisonBG5.jpg"};
 	
 	/**
 	 * The names of the button images to display.
 	 */
-	private static String[] BUTTON_IMAGE_NAMES = {};
+	private static String[] BUTTON_IMAGE_NAMES = {"Note.png","CallWarden.png","Spaghetti.jpg","SpaghettiSauce.png","Fork.png"};
 	
 	/**
 	 * The areas where we have to click to progress.
@@ -112,7 +112,7 @@ public class SpeedListener implements MouseListener
 				//Nothing happens, the user must call the warden.
 				break;
 			case 3://Click on ceiling with spaghetti; new image.
-				if(CLICK_AREAS[3].contains(e.getPoint()))
+				if(CLICK_AREAS[3].contains(e.getPoint()) && info.getInventory()[2] == 2)
 				{
 					info.incrementProgression();
 				}
@@ -124,7 +124,7 @@ public class SpeedListener implements MouseListener
 				}
 				break;
 			case 5://Click near the character with sauce; new image.
-				if(CLICK_AREAS[5].contains(e.getPoint()))
+				if(CLICK_AREAS[5].contains(e.getPoint()) && info.getInventory()[3] == 2)
 				{
 					info.incrementProgression();
 				}
