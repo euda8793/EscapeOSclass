@@ -1,6 +1,7 @@
 package ui;
 
 import java.awt.Color;
+import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
 import java.awt.Font;
@@ -34,7 +35,7 @@ public class GameWindow extends JFrame{
 	protected JPanel pan3;
 	protected JPanel pan4;
 	protected JTextField tf;
-	
+	private boolean clicked;
 	private int charIndex;
 	
 	//custom label
@@ -67,7 +68,8 @@ public class GameWindow extends JFrame{
 		pan1.add(pan3);
 		pan3.setPreferredSize(new Dimension(1100, 140));
 		pan3.setBackground(Color.gray);
-		pan3.add(new IButton("PrisonBG.jpg"));
+		pan3.add(new IButton("PrisonBG.jpg", "prison"));
+		pan3.add(new IButton("PrisonBG.jpg", "priso"));
 		tf = new JTextField();
 		tf.setPreferredSize(new Dimension(1100, 40));
 		tf.setEnabled(false);
@@ -139,9 +141,9 @@ public class GameWindow extends JFrame{
 	//new button class
 	private class IButton extends JButton{
 		
-		boolean clicked;
+
 		
-		public IButton(String filename){//place the name of the picture file in here, formatting is handled here.
+		public IButton(String filename, String name){//place the name of the picture file in here, formatting is handled here.
 			
 			clicked = false;
 			this.setSize(140, 140);
@@ -150,6 +152,7 @@ public class GameWindow extends JFrame{
 			Image newimg = img.getScaledInstance(100, 100,  java.awt.Image.SCALE_FAST);
 			this.setIcon(new ImageIcon(newimg));
 			this.setMargin(new Insets(0, 0, 0, 0));
+			this.setName(name);
 			this.setBorder(BorderFactory.createRaisedBevelBorder());
 
 			
@@ -184,9 +187,23 @@ public class GameWindow extends JFrame{
 				public void mouseReleased(MouseEvent e) {
 					if(clicked){//deselect button
 						
-						IButton.this.setBorder(BorderFactory.createRaisedBevelBorder());
+						for(Component b : pan3.getComponents()){
+							
+							((IButton)b).setBorder(BorderFactory.createRaisedBevelBorder());
+							
+						}
 						
-						clicked = false;
+						if(!((IButton)e.getSource()).equals(IButton.this)){
+							
+							((IButton)e.getSource()).setBorder(BorderFactory.createLoweredBevelBorder());
+							
+						}else{
+							
+							clicked = false;
+						}
+						
+						
+						
 					}else{//select button
 						
 						IButton.this.setBorder(BorderFactory.createLoweredBevelBorder());
